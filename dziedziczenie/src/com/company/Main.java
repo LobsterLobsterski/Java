@@ -11,8 +11,12 @@ public class Main {
 
     public static void log(){
         while (pozUprawnien==0){
+            System.out.println("Login: ");
+            String log=s.next();
+            System.out.println("Haslo: ");
+            String has=s.next();
             for (Pracownik p: konta){
-                pozUprawnien = p.zaloguj();
+                pozUprawnien = p.zaloguj(log, has);
                 if (pozUprawnien!=0){
                     break;
                 }
@@ -96,6 +100,23 @@ public class Main {
                     break;
 
                 case 5://odbierz zam
+                    if (Kelner.zamowienia.size() <1){
+                        System.out.println("Brak zamowien");
+                    }
+                    else{
+                        System.out.println("Wybierz indeks kelnera ktory ma odebrac zamowienie");
+                        for (i=0; i<konta.size()-1; i++){
+                            if (konta.get(i) instanceof Kelner){
+                                System.out.println(i+" "+konta.get(i).imie +" "+konta.get(i).nazwisko+" "+konta.get(i).wiek);
+                            }
+                        }
+                        System.out.println();
+                        int idx = s.nextInt();
+                        Kelner k = (Kelner) konta.get(idx);
+
+                        k.odbierz();
+                    }
+                    break;
 
                 default://wyloguj
                     pozUprawnien=0;

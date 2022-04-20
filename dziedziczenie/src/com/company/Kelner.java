@@ -14,10 +14,10 @@ public class Kelner extends Pracownik{
         liczbaZrealizowanychZamowien=s.nextInt();
     }
 
-    Kelner(int napiwki, int liczbaZamowienia, String imie, String nazwisko, int lataPracy, int wiek, int pensja){
+    Kelner(int napiwki, int liczbaZamowien, String imie, String nazwisko, int lataPracy, int wiek, int pensja){
         super(imie, nazwisko, lataPracy, wiek, pensja);
         this.napiwki=napiwki;
-        this.liczbaZrealizowanychZamowien=liczbaZamowienia;
+        this.liczbaZrealizowanychZamowien=liczbaZamowien;
     }
 
     public static Vector<String> zamowienia =  new Vector<String>();
@@ -30,6 +30,7 @@ public class Kelner extends Pracownik{
         System.out.println("zamówienie do odebrania: "+zamowienia.get(0));
         zamowienia.remove(0);
         liczbaZrealizowanychZamowien++;
+        System.out.println("zamówienie odebrane przez: " + imie+" "+nazwisko);
 
     }
 
