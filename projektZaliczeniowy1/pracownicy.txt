@@ -1,0 +1,8 @@
+Kierowca 6 20 true VW 1 Jan Nowicki 5 65 1466
+Kierowca 7 12 true Toyota 2 Janusz Nowak 0 20 2242
+Kelner 200 20 3 Jano Nowakowski 4 25 3200
+Kelner 0 20 4 Jano Asus 2 35 3000
+Kelner 12 20 5 Jano Dell 1 45 3012
+Kucharz false 30 6 ala ala 10 20 6900
+Kucharz true 70 7 Eustachy Słoneczko 40 78 10900
+Kucharz true 12 8 Muhamadd Il'Ab'MuhadiiII 2 24 5100
